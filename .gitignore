@@ -104,4 +104,4 @@ dist
 .tern-port
 
 .DS_Store
-eslint_report.txt
+eslint_report.json
