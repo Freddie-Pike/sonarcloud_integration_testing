@@ -17,6 +17,8 @@ jobs:
           node-version: 13.x
       - run: npm i
       - run: npm run lint
+      - name: Move eslint report where sonarcloud runner can find it.
+        run: sed -i 's+/home/runner/work/***+/github/workspace+g' eslint_report.json
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
